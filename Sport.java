@@ -2,7 +2,7 @@ import java.util.*;
 public class Sport
 {
     private int[] record = new int[2];
-    private String position;
+    private String position, years;
     private Scanner in = new Scanner(System.in);
     
     public Sport() {
@@ -12,7 +12,7 @@ public class Sport
         record[0] = in.nextInt();
         System.out.println("How many games did they lose?");
         record[1] = in.nextInt();
+        System.out.println("How long have they been playing?");
+        years = in.nextLine();
     }
-    
-    
 }

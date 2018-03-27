@@ -12,7 +12,7 @@ public class Player
         name = in.nextLine();
         System.out.println("What is the player's identified gender?");
         gender = in.nextLine();
-        String sportType
+        String sportType;
         
         sportType = checkSport();
         switch(sportType.toLowerCase()) {
