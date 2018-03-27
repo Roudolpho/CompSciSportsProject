@@ -12,9 +12,9 @@ public class Player
         name = in.nextLine();
         System.out.println("What is the player's identified gender?");
         gender = in.nextLine();
-        String sportType
+        String sportType = "";
+        while(checkSport(sportType)) {sportType = in.nextLine();}
         
-        sportType = checkSport();
         switch(sportType.toLowerCase()) {
             case "volleyball":
                 stats = new Volleyball();
@@ -28,7 +28,10 @@ public class Player
         }
     }
     
-    private boolean checkSport() {
-        
+    private boolean checkSport(String test) {
+        for(int i = 0;i<sports.length;i++){
+            if(test.equalsIgnoreCase(sports[i])) {return true;}
+        }
+        return false;
     }
 }
