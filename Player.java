@@ -19,13 +19,13 @@ public class Player
         switch(sportType.toLowerCase()) {
             case "volleyball":
                 stats = new Volleyball();
-            
+            break;
             case "soccer":
                 stats = new Soccer();
-            
+            break;
             case "lacrosse":
                 stats = new Lacrosse();
-            
+            break;
         }
         System.out.println("\f");
     }
