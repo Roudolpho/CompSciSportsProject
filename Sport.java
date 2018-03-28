@@ -8,11 +8,15 @@ public class Sport
     public Sport() {
         System.out.println("What is their position?");
         position = in.nextLine();
-        System.out.println("How many games did they win?");
-        record[0] = in.nextInt();
-        System.out.println("How many games did they lose?");
-        record[1] = in.nextInt();
+        record[0] = Extra.askInt("How many games did they win?", "Thats not a number, please enter a number");
+        record[1] = Extra.askInt("How many games did they lose?", "Thats not a number, please enter a number");
         System.out.println("How long have they been playing?");
         years = in.nextLine();
+    }
+    
+    public String toString() {
+        String temp = "";
+        temp += "Position:\t"+position+"\nYears:\t"+years+"\nWins:\t"+record[0]+"\nLoses:\t"+record[1];
+        return temp;
     }
 }
