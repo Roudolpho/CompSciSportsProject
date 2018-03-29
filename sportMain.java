@@ -14,8 +14,8 @@ public class sportMain extends Sport
       Player p3 = new Player();
       
       
-      System.out.println(p1);
-      System.out.println(p2);
-      System.out.println(p3);
+      System.out.println(p1.toString());
+      System.out.println(p2.toString());
+      System.out.println(p3.toString());
    }
 }

@@ -10,55 +10,42 @@ public class Volleyball extends Sport
 {
 
     private int blocks, kills, aces, sets, hits, digs;
-    private int netViolation, footFault, injuries;
-    private int height, reach, verticle, blockJump, approachJump;
+    private int netViolation, footFault;
+    private String height, reach, verticle;
 
     Scanner s = new Scanner(System.in);
 
     public Volleyball()
     {
-        System.out.println("How tall are they (inches)?");
-        height = s.nextInt();
+        System.out.println("How tall are they?");
+        height = s.nextLine();
         System.out.println("What is their reach?");
-        reach = s.nextInt(); 
+        reach = s.nextLine();
         System.out.println("What is their verticle?");
-        verticle = s.nextInt(); 
-        System.out.println("What is their block jump?");
-        blockJump = s.nextInt();
-        System.out.println("What is their approch jump?");
-        approachJump = s.nextInt();
-      
+        verticle = s.nextLine();
        
-        
-        System.out.println("How many block did they have?");
-        blocks = s.nextInt();
-        System.out.println("How many games did they have?");
-        hits  = s.nextInt();
-        System.out.println("How many kills did they have?");
-        kills = s.nextInt();
-        System.out.println("How many aces did they have?");
-        aces = s.nextInt();
-        System.out.println("How many assists/sets did they have?");
-        sets = s.nextInt();        
-        System.out.println("How many digs/passes did they have?");
-        digs = s.nextInt();
-        
-        System.out.println("How many net violations did they have?");       
-        netViolation = s.nextInt();
-        System.out.println("How many foot faults did they have?");
-        footFault  = s.nextInt();
-        System.out.println("How many injuries did they have?");
-        injuries = s.nextInt();
+        blocks = Extra.askInt("How many blocks did they have?", "Enter Number of blocks");
+        hits  = Extra.askInt("How many hits did they have?", "Enter Number of hits");
+        kills = Extra.askInt("How many kills did they have?", "Enter Number of kills");
+        aces = Extra.askInt("How many aces did they have?", "Enter Number of aces");  
+        sets = Extra.askInt("How many assists/sets did they have?", "Enter Number of assists/sets");
+        digs = Extra.askInt("How many digs/passes did they have?", "Enter Number of digs/passes");
+             
+        netViolation = Extra.askInt("How many net violations did they have?", "Enter Number of net violations");
+        footFault  = Extra.askInt("How many foot faults did they have?", "Enter Number of foot faults");
+       
     }
-
+    
 
     public String toString()
     {
-        String vballThings;
+       String vballThings = super.toString();
         
-        vballThings = "Personal Stats:\n Height:  " + height+ "\n Reach:  " +reach+ "\n Verticle:  "+ verticle+ "\n Block Jump:  " +blockJump + "\n Approach Jump:  " + approachJump;
+        vballThings += "\n\nPersonal Stats:\n Height:  " + height+ "\n Reach:  " +reach+ "\n Verticle:  "+ verticle;
         vballThings+="\n\n Game Stats:\n Blocks:  "+blocks+ "\n Hits:  "+hits+ "\n Kills:  "+ kills+ "\n Aces:  "+aces+ "\n Assists/Sets:  "+sets+ "\n Digs/Passes:  "+digs;
-        vballThings+= "\n\n Penalty Stats:\n Net Violations:  " + netViolation+ "\n Foot Faults:  "+ footFault+ "\n Injuries:  "+ injuries;
+        vballThings+= "\n\n Penalty Stats:\n Net Violations:  " + netViolation+ "\n Foot Faults:  "+ footFault;
         return vballThings;
+        
+       
     }
 }
