@@ -24,6 +24,6 @@ public class Soccer extends Sport
         String temp = super.toString();
         
         temp += "\nPersonal Stats:\nShots:\t"+shots+"\nSaves:\t"+saves+"\nHeaders:\t"+headers;
-        return "";
+        return temp;
     }
 }

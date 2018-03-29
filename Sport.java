@@ -16,7 +16,7 @@ public class Sport
     
     public String toString() {
         String temp = "";
-        temp += "\n\nPosition:\t"+position+"\nYears:\t"+years+"\nWins:\t"+record[0]+"\nLoses:\t"+record[1];
+        temp += "\nPosition:"+position+"\nYears:\t"+years+"\nWins:\t"+record[0]+"\nLoses:\t"+record[1];
         return temp;
     }
 }

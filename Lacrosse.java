@@ -7,27 +7,23 @@
  */
 public class Lacrosse extends Sport
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private int shots, saves, headers;
 
     /**
      * Constructor for objects of class Lacrosse
      */
     public Lacrosse()
-    {
-        // initialise instance variables
-        x = 0;
+    { shots = Extra.askInt("How many shots did they have?", "Please give a number.");
+        saves = Extra.askInt("How many saves did they have?", "Please give a number.");
+        headers = Extra.askInt("How many ground balls did they have?", "Please give a number.");
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        String temp = super.toString();
+
+        temp += "\nPersonal Stats:\nShots:\t"+shots+"\nSaves:\t"+saves+"\nGround Balls:\t"+headers;
+        return temp;
     }
+
 }

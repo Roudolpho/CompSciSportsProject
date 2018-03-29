@@ -39,7 +39,7 @@ public class Player
     
     public String toString() {
         String temp = "";
-        temp += "Name:\t"+name+"\nGender:\t"+gender+"\nSport:\t"+sport+"\n"+stats.toString();
+        temp += "\nName:\t"+name+"\nGender:\t"+gender+"\nSport:\t"+sport+"\n"+stats.toString();
         return temp;
     }
 }
